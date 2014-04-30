@@ -6,6 +6,7 @@ In Ruby, arrays can store any type of elements.
 =begin
 All about 1D arrays
 =end
+#module Enumerable
 def elements
 	s=[]
 	#or s=Array.new
@@ -88,7 +89,7 @@ puts(s4.sort)
 
 =begin
 Now learning Hash. Hash is like Dictionary in Python, HashMap in Java.
-Its like array but in array indexes are always an integer but in Hash, it can be any index value.
+Its like array but in array,indexes are always an integer but in Hash, it can be any index value.
 It keeps only unique keys.
 =end
 
@@ -97,6 +98,7 @@ puts("=====Hash=====")
 h1["A"]="Abhinav"
 h1["B"]="Bachelor"
 h1["C"]="Computers"
+
 
 puts(h1["A"]+"\n")
 
@@ -107,7 +109,40 @@ h2={ "A"=>"Abhinav",
 	 "C"=>"Computers" }
 puts(h2)
 
+h3=h2.clone
+h2["D"]="Darling"
+
+puts("=============================")
+puts(h2)
+puts("=============================")
+puts(h3)
+puts("\n",h2.has_value?("Abhinav"))
+puts("\n",h2.keys)
+puts("\n",h2.values)
+puts("\n",h2.invert) #keys as values and values as keys
+
+#h1.keys & h2.keys - intersection
+#h1.keys + h2.keys - concatenation
+#h1.keys << h2.keys
+
+puts("\n",(h2.keys << h3.keys).flatten) #reverse - reverses the order of hash
+
+x1=[1,2,3]
+x2=[5,6,7]
+puts
+print(x1+x2) #[1, 2, 3, 5, 6, 7]
+puts
+print(x1<<x2) #[1, 2, 3, [5, 6, 7]]
+y = x1.collect{ |i| i }
+puts
+print(y)
+puts("\n",x1.include?(3))
 
 
+
+#or
+
+puts
+puts((1..4)===1) # but (1===(1..4)) is false ??
 
 
