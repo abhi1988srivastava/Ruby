@@ -40,6 +40,8 @@ puts ("#{fnum.object_id}")
 fnum=1.5
 puts ("#{fnum.object_id}")
 
+puts ("===============================")
+
 s="abhi"
 puts ("#{s.object_id}")
 s="abhi"
@@ -52,6 +54,14 @@ puts ("#{s.object_id}")
 s+=" hello"
 puts ("#{s.object_id}")
 
+puts ("===============================")
+#assignment object_id, same object id, both referencing to same address.
+s2="abhi"
+s1=s2
+puts ("#{s2.object_id}")
+puts ("#{s1.object_id}")
+
+puts ("===============================")
 =begin
 change effect on a variable in a method takes place only when method returns.
 for string, use of use of << alters the input string while + does not.
@@ -83,10 +93,14 @@ puts (s)
 puts (arg)
 puts ("#{arg.object_id}")
 
+puts ("===============================")
+
 s=modString2(arg)
 puts (s)
 puts (arg)
 puts ("#{arg.object_id}")
+
+puts ("===============================")
 
 arg1="hello"
 puts ("#{arg1.object_id}")
